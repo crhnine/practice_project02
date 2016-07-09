@@ -1,0 +1,33 @@
+﻿body
+{
+}
+
+table{
+
+    width:100%;
+    
+}
+
+.table_head{
+
+    width:45px;
+    height:50px;
+    font-weight:700;
+    font-size:1.5em;
+    color: #0c57ab;
+    padding:10px;
+    text-align:center;
+}
+
+tbody{
+
+    padding:0px;
+}
+
+ td{
+
+    border:1px solid #888;
+    height:50px;
+    width:50px;
+    padding:0px;
+}

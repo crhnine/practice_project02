@@ -1,0 +1,91 @@
+﻿body
+{
+
+}
+
+
+
+#backdrop_image{
+
+    height:678px;
+    width:100%;
+    position:relative;
+    z-index:-1;
+}
+
+
+
+#content{
+
+    height:200px;
+    width:100%;
+    z-index:3;
+    position:relative;
+    background-image:url('../images/parallax_block.png');
+    margin-top:-200px;
+
+}
+
+.content_container{
+
+    margin:0 auto;
+    width:50%;
+    text-align:center;
+    color:white;
+}
+
+.content_information{
+
+    padding-top:25px;
+    font-size:1.75em;
+    font-weight:700;
+}
+
+.subsection_container{
+
+    position:relative;
+    width:100%;
+    background-color:#fff;
+    height:400px;
+    margin-top:500px;
+    z-index:3;
+}
+
+.subsection_container{
+
+    
+}
+
+.subsection_set{
+
+    width:85%;
+    height:100%;
+    margin:0 auto;
+    padding-top:38px;
+}
+
+.subsection_entry{
+
+    width: 33%;
+    height: 75%; 
+    padding-top: 25px; 
+    float: left; 
+    border-top: 1px solid #0c57ab; 
+    border-bottom: 1px solid #0c57ab; 
+    -webkit-border-radius: 15%; 
+    -moz-border-radius: 15%; 
+    border-radius: 15%;
+}
+
+.subsection_entry:hover{
+
+    background-color:#e4edfb;
+}
+
+.subsection_entry_title{
+
+    font-size: 1.4em; 
+    font-weight: 700;
+    color:#232323;
+    text-align:center;
+}

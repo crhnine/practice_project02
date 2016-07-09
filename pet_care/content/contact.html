@@ -1,0 +1,221 @@
+﻿<!--Created By: Christopher Hodges | Homework 08 | Started 05/26/2015-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Pet Care</title>
+
+    <link href="../layout/normalize.css" rel="stylesheet" type="text/css" />
+    <link href="../layout/custom.css" rel="stylesheet" type="text/css" />
+    <link href="../layout/contact.css" rel="stylesheet" type="text/css" />
+    <meta charset="utf-8" />
+
+</head>
+<body>
+
+
+    <header id="header">
+        <div class="company_info">
+
+            <div class="company_name">
+                <div class="header_entry1">
+                    Pet Care
+                </div>
+            </div>
+
+            <div class="company_contact">
+                <div class="header_entry2">
+                    +1-502-435-7831 | emily_schweis@petcare.com
+                </div>
+            </div>
+
+        </div>
+
+
+    </header>
+
+    <nav id="nav">
+
+        <div class="nav_container">
+
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li class="last_nav_link"><a href="prices.html">Prices</a></li>
+            </ul>
+
+        </div>
+
+    </nav>
+    <!-------------------------------------------------------------------------------------->
+    <!--To be displayed once a certain part of the screen has been reached on the y-axis. -->
+    <!-------------------------------------------------------------------------------------->
+    <div id="menu">
+        <div class="nav_container">
+
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li class="last_nav_link"><a href="prices.html">Prices</a></li>
+            </ul>
+
+        </div>
+        <!-------------------------------------------------------------------------------------->
+        <!-------------------------------------------------------------------------------------->
+    </div>
+
+    <section>
+
+        <div class="form_container">
+            <form id="pet_form" action="form_submit.php" enctype="multipart/form-data" method="post">
+
+                <h4>Please provide us your name:</h4><br />
+                First:&nbsp;&nbsp;<input type="text" name="first_name" />
+                Last:&nbsp;&nbsp;<input type="text" name="last_name" />
+                <br />
+                <br />
+                <h4>We would like to know more about your pet! What is his or her name?</h4><br />
+                <input type="text" name="pets_name" />
+
+                <h4>Tell us about any unique personality traits of your pet. We need to know if they react angrily or jumpy etc to anything:</h4>
+                <textarea name="pet_traits" cols="40" rows="15"></textarea>
+
+                <h4>What type of pet will you be bringing?</h4>
+                <select name="pet_type">
+
+                    <option>Cat</option>
+                    <option>Dog</option>
+                    <option>Bird</option>
+                    <option>Other</option>
+
+                </select>
+
+                <h4>What is the gender of your pet?</h4>
+
+                <select name="pet_gender">
+
+                    <option>Male</option>
+                    <option>Female</option>
+
+                </select>
+
+                <h4>Please select the plan level you wish to be a part of:</h4>
+                <select name="plan_level">
+
+                    <option>Gold</option>
+                    <option>Silver</option>
+                    <option>Bronze</option>
+                    <option>No Plan Please</option>
+
+                </select>
+
+                <h4>Would you like to be on our emailing list? We promise only to send important updates or discount offers/sales information.</h4>
+
+                <input type="radio" name="email_list" value="yes"/>Yes
+                <input type="radio" name="email_list" value="no"/>No
+
+                <br />
+                <br />
+
+                <input type="submit" />
+                <input type="reset" />
+
+            </form>
+        </div>
+
+        <div style="float:left;width:45%;padding:15px 10px 35px 10px;">
+            <div style="width:90%;height:300px;margin:0 auto;">
+
+                <h4>Plan memberships that we have available include:</h4>
+                <img src="../images/gold_plan.jpg" />: $100/month<br />
+                <img src="../images/silver_plan.jpg"/>: $50/month<br />
+                <img src="../images/bronze_plan.jpg"/>:$25/month<br />
+                <h4>All membership plans include entry to any events we host on location!<br />
+                By choosing a plan you save time and money. No longer will you have to fill out 
+                guest forms and we will keep even greater detailed track of your pets' visits for 
+                any possible future reference. Savings from memberships start at $30 per month depending on how
+                many events you show up to. Stop in and apply today!</h4>
+
+            </div>
+
+            <div style="width:50%;margin:0 auto;padding-top:50px;">
+
+                <img src="../images/dog.jpg" style="border-radius:100%;"/><br />
+
+                <img src="../images/kitten.jpg" style="border-radius:100%;"/><br />
+
+                <img src="../images/bird.jpg" style="border-radius:100%;"/>
+            </div>
+
+
+        </div>
+
+    </section>
+
+    <footer style="clear:both;padding-top:35px;">
+
+        <div style="width:100%;height:50px;background-color:#1e1e1e;padding:15px 0px 15px 0px;">
+            <p style="padding-left:20px;float:left;width:45%;text-align:left;color:white;">
+                &copy;&nbsp;Copyright 2015 || All rights reserved
+            </p>
+            <p style="padding-right:20px;float:right;width:45%;text-align:right;color:white;">
+                Developed By:Christopher Hodges
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <script type="text/javascript">
+
+        var ypos, image;
+
+        function parallax() {
+
+
+            ypos = window.pageYOffset;
+
+            backdrop_image = document.getElementById('backdrop_image');
+            backdrop_image.style.top = ypos * .7 + 'px';
+
+            header = document.getElementById('header');
+            header.style.top = ypos * .7 + 'px';
+
+            nav = document.getElementById('nav');
+            nav.style.top = ypos * .7 + 'px';
+        }
+
+        window.addEventListener('scroll', parallax)
+    </script>
+
+    <!--Menu fade in currently set to show at 200px from the top of window.-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+
+    <script type="text/javascript">
+        (function ($) {
+            $(document).ready(function () {
+                $(window).scroll(function () {
+                    if ($(this).scrollTop() > 130) {
+                        $('#menu').fadeIn(10);
+                    } else {
+                        $('#menu').fadeOut(10);
+                    }
+
+                    if ($(this).scrollTop() > 1000) {
+                        $().fadeIn(500);
+
+                    }
+                    else {
+                        $().fadeOut(10);
+                    }
+
+
+                });
+            });
+        })(jQuery);
+    </script>
+</body>
+</html>

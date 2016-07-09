@@ -1,0 +1,183 @@
+﻿<!--Created By: Christopher Hodges | Homework 08 | Started 05/26/2015-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Pet Care</title>
+
+    <link href="../layout/normalize.css" rel="stylesheet" type="text/css" />
+    <link href="../layout/custom.css" rel="stylesheet" type="text/css" />
+    <link href="../layout/prices.css" rel="stylesheet" type="text/css" />
+    <meta charset="utf-8" />
+
+</head>
+<body>
+
+
+    <header id="header">
+        <div class="company_info">
+
+            <div class="company_name">
+                <div class="header_entry1">
+                    Pet Care
+                </div>
+            </div>
+
+            <div class="company_contact">
+                <div class="header_entry2">
+                    +1-502-435-7831 | emily_schweis@petcare.com
+                </div>
+            </div>
+
+        </div>
+
+
+    </header>
+
+    <nav id="nav">
+
+        <div class="nav_container">
+
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li class="last_nav_link"><a href="prices.html">Prices</a></li>
+            </ul>
+
+        </div>
+
+    </nav>
+    <!-------------------------------------------------------------------------------------->
+    <!--To be displayed once a certain part of the screen has been reached on the y-axis. -->
+    <!-------------------------------------------------------------------------------------->
+    <div id="menu">
+        <div class="nav_container">
+
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li class="last_nav_link"><a href="prices.html">Prices</a></li>
+            </ul>
+
+        </div>
+        <!-------------------------------------------------------------------------------------->
+        <!-------------------------------------------------------------------------------------->
+    </div>
+
+    <section>
+        <div style="width:65%;margin:0 auto;margin-top:30px;">
+            <table>
+                <thead>
+                    <tr class="table_head">
+                        <td>Service</td>
+                        <td>Price</td>
+                        <td>Frequency</td>
+
+                    </tr>
+
+                </thead>
+                <tbody>
+                    <tr class="table_body">
+                        <td>Daycare</td>
+                        <td>$35</td>
+                        <td>Day</td>
+
+                    </tr>
+                    <tr class="table_body">
+                        <td>Boarding</td>
+                        <td>$25/$100</td>
+                        <td>Day/week</td>
+
+                    </tr>
+                    <tr class="table_body">
+                        <td>Training</td>
+                        <td>$35/+$10</td>
+                        <td>Day/Per Hour</td>
+
+                    </tr>
+                    <tr class="table_body">
+                        <td>Grooming</td>
+                        <td>Varies</td>
+                        <td>Ask Inside or by Phone!</td>
+
+                    </tr>
+                    
+
+                </tbody>
+                <tfoot>
+
+
+                </tfoot>
+
+
+            </table>
+        </div>
+    </section>
+
+    <footer style="clear:both;padding-top:80px;">
+
+        <div style="width:100%;height:50px;background-color:#1e1e1e;padding:15px 0px 15px 0px;">
+            <p style="padding-left:20px;float:left;width:45%;text-align:left;color:white;">
+                &copy;&nbsp;Copyright 2015 || All rights reserved
+            </p>
+            <p style="padding-right:20px;float:right;width:45%;text-align:right;color:white;">
+                Developed By:Christopher Hodges
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <script type="text/javascript">
+
+        var ypos, image;
+
+        function parallax() {
+
+
+            ypos = window.pageYOffset;
+
+            backdrop_image = document.getElementById('backdrop_image');
+            backdrop_image.style.top = ypos * .7 + 'px';
+
+            header = document.getElementById('header');
+            header.style.top = ypos * .7 + 'px';
+
+            nav = document.getElementById('nav');
+            nav.style.top = ypos * .7 + 'px';
+        }
+
+        window.addEventListener('scroll', parallax)
+    </script>
+
+    <!--Menu fade in currently set to show at 200px from the top of window.-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+
+    <script type="text/javascript">
+        (function ($) {
+            $(document).ready(function () {
+                $(window).scroll(function () {
+                    if ($(this).scrollTop() > 440) {
+                        $('#menu').fadeIn(10);
+                    } else {
+                        $('#menu').fadeOut(10);
+                    }
+
+                    if ($(this).scrollTop() > 1000) {
+                        $().fadeIn(500);
+
+                    }
+                    else {
+                        $().fadeOut(10);
+                    }
+
+                    $.jInvertScroll(['scooter_dog']);
+                });
+            });
+        })(jQuery);
+    </script>
+</body>
+</html>

@@ -1,0 +1,199 @@
+﻿<!--Created By: Christopher Hodges | Homework 08 | Started 05/26/2015-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Pet Care</title>
+
+    <link href="layout/normalize.css" rel="stylesheet" type="text/css" />
+    <link href="layout/custom.css" rel="stylesheet" type="text/css" />
+    <link href="layout/index.css" rel="stylesheet" type="text/css" />
+    <meta charset="utf-8" />
+
+</head>
+<body>
+
+
+    <header id="header">
+        <div class="company_info">
+
+            <div class="company_name">
+                <div class="header_logo">
+                    <img src="images/logo.jpg" class="logo" />
+                </div>
+                <div class="header_entry1">
+                    Pet Care
+                </div>
+            </div>
+
+            <div class="company_contact">
+                <div class="header_entry2">
+                    +1-502-435-7831 | emily_schweis@petcare.com
+                </div>
+            </div>
+            
+        </div>
+
+       
+    </header>
+
+    <nav id="nav">
+
+        <div class="nav_container">
+
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="content/contact.html">Contact</a></li>
+                <li><a href="content/services.html">Services</a></li>
+                <li class="last_nav_link"><a href="content/prices.html">Prices</a></li>
+            </ul>
+
+        </div>
+
+    </nav>
+    <!-------------------------------------------------------------------------------------->
+    <!--To be displayed once a certain part of the screen has been reached on the y-axis. -->
+    <!-------------------------------------------------------------------------------------->
+    <div id="menu">
+        <div class="nav_container">
+
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="content/contact.html">Contact</a></li>
+                <li><a href="content/services.html">Services</a></li>
+                <li class="last_nav_link"><a href="content/prices.html">Prices</a></li>
+            </ul>
+
+        </div>
+    <!-------------------------------------------------------------------------------------->
+    <!-------------------------------------------------------------------------------------->
+    </div>
+
+    <!--------------------------------------------------------------------------------------------------->
+    <!------------------------               SECTION                 ------------------------------------>
+    <!--------------------------------------------------------------------------------------------------->
+
+
+    <section>
+
+        <div id="background-image"><img src="images/neighborhood_road.png" id="backdrop_image"/></div>
+
+        <div id="content">
+            <div class="content_container">
+                <div class="content_information">                  
+                    <p>Welcome to Pet Care!</p>
+                    <p>Your one stop shop for all of your pet's needs.</p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="subsection_container">
+            <div class="subsection_set">
+
+
+                <div class="subsection_entry">
+
+                    <p class="subsection_entry_title">Pet Supplies</p>
+                    <div class="subsection_text" style="width:75%;height:100%;margin:0 auto;">
+                        <p style="text-align:center;">Stop in to get all of your pet supplies from food to toys! Anything and everything to make your pet feel like a loved 
+                        member of the family.</p>
+
+                    </div>
+                </div>
+                <div class="subsection_entry">
+
+                    <p class="subsection_entry_title">Training</p>
+                    <div class="subsection_text" style="width:75%;height:100%;margin:0 auto;">
+                        <p style="text-align:center;">
+                            Register your cat or dog for our great training services. We have all of the training needed to domesticate
+                            your pets. Whoever said an old dog cannot learn new tricks never met us! This is a great option too if you and yours are headed out on a
+                            trip and need somewhere fun and safe to leave your pets.
+                        </p>
+                    </div>
+                </div>
+                <div class="subsection_entry">
+
+                    <p class="subsection_entry_title">Grooming</p>
+                    <div class="subsection_text" style="width:75%;height:100%;margin:0 auto;">
+                        <p style="text-align:center;">Nails needing trimmed? Dog hair gone wild? Bring in your pet to take care of all of their grooming needs!</p>
+
+                    </div>
+
+
+                </div>
+          </div>
+        </div>
+
+
+    </section>
+
+    <!--------------------------------------------------------------------------------------------------->
+    <!--------------------------------------------------------------------------------------------------->
+    <!--------------------------------------------------------------------------------------------------->
+
+    <footer>
+
+        <div style="width:100%;height:50px;background-color:#1e1e1e;padding:15px 0px 15px 0px;">            
+                <p style="padding-left:20px;float:left;width:45%;text-align:left;color:white;">
+                     &copy;&nbsp;Copyright 2015 || All rights reserved
+                </p>           
+            <p style="padding-right:20px;float:right;width:45%;text-align:right;color:white;">
+                     Developed By:<a href="http://www.hillviewpcrepair.com" style="text-decoration:none;color:white;">Christopher Hodges</a>
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <script type="text/javascript">
+
+        var ypos, image;
+
+        function parallax() {
+
+
+            ypos = window.pageYOffset;
+
+            backdrop_image = document.getElementById('backdrop_image');
+            backdrop_image.style.top = ypos * .7 + 'px';
+
+            header = document.getElementById('header');
+            header.style.top = ypos * .7 + 'px';
+
+            nav = document.getElementById('nav');
+            nav.style.top = ypos * .7 + 'px';
+        }
+
+        window.addEventListener('scroll', parallax)
+    </script>
+
+    <!--Menu fade in currently set to show at 200px from the top of window.-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+
+    <script type="text/javascript">
+        (function ($) {
+            $(document).ready(function () {
+                $(window).scroll(function () {
+                    if ($(this).scrollTop() > 440) {
+                        $('#menu').fadeIn(10);
+                    } else {
+                        $('#menu').fadeOut(10);
+                    }
+
+                    if ($(this).scrollTop() > 1000) {
+                        $().fadeIn(500);
+
+                    }
+                    else {
+                        $().fadeOut(10);
+                    }
+
+                    $.jInvertScroll(['scooter_dog']);
+                });
+            });
+        })(jQuery);
+    </script>
+</body>
+</html>
